@@ -1,6 +1,6 @@
 FROM r-base:latest
 
-MAINTAINER Flavio Barros "flaviommbarros@gmail.com"
+MAINTAINER Edmund Hart "edmund.m.hart@gmail.com"
 
 RUN apt-get update && apt-get install -y \
     sudo \
@@ -23,10 +23,8 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb
 
-RUN R -e "install.packages(c('shiny', 'httr', 'lubridate', 'd3Network', 'igraph','devtools'), repos='http://cran.rstudio.com/')"
-
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
-COPY /myapp/* /srv/shiny-server/
+COPY /shiny-network/* /srv/shiny-server/
 
 EXPOSE 80
 
