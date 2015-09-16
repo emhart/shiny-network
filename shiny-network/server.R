@@ -1,5 +1,7 @@
 library(d3Network)
 library(igraph)
+library(stringr)
+library(dplyr)
 source('networkfxn.R')
 shinyServer(function(input, output) {
 
