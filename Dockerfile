@@ -24,8 +24,8 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     rm -f version.txt ss-latest.deb
 
 
-RUN R -e "install.packages(c('shiny', 'httr', 'lubridate', 'd3Network', 'igraph','devtools'), repos='http://cran.rstudio.com/')"
-RUN R -e "library(devtools);install_github(emhart/)"
+RUN R -e "install.packages(c('shiny', 'httr', 'lubridate', 'd3Network', 'igraph','dplyr','strtingr',), repos='http://cran.rstudio.com/')"
+
 
 
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
