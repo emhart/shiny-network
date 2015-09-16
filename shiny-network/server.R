@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
       d3ForceNetwork(Nodes = myD3graph$node,
                      Links = myD3graph$d3g,
                      Source = "from", Target = "to", NodeID = "name",
-                     Group = "group", width = 700, height = 700, parentElement = '#networkPlot',
+                     Group = "group", width = 900, height = 900, parentElement = '#networkPlot',
                       standAlone = FALSE,zoom = TRUE,opacity = .9,linkWidth = .3)
     })
 
