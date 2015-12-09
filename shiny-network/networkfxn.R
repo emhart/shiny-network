@@ -120,7 +120,7 @@ return(all_tweets)
 
 tweet_from_api <- function(tweetMin,dt){
 
-  baseURL <- paste("http://emhart.info/tweets/ESA/2015?date=",dt,sep="")
+  baseURL <- paste("http://emhart.info/tweets/AGU/2015?date=",dt,sep="")
   dat <- GET(baseURL)
   tdf <- content(dat)
 
